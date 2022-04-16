@@ -1,0 +1,61 @@
+/* You're welcome to change any of this! */
+
+
+header, section {
+    padding-top: 10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif, sans-serif;
+    text-transform: lowercase;
+    margin-left: 20px;
+    
+}
+
+h1{
+font-size: 50px;
+letter-spacing: 10px;
+text-align: center;
+}
+#csheader{
+    font-size: 20px;
+    margin-left: 20px;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+h2 {
+    column-span: 100px;
+    text-transform: lowercase;
+   
+}
+
+#tutorials{ 
+    background-color: #EE9B00;
+    padding-bottom: 10px;
+}
+ 
+#homework{
+    background-color: antiquewhite;
+    padding-bottom: 50px;
+}
+
+main {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-left: 20px;
+
+
+}
+
+div{
+column-count: 3;
+column-gap:15px;
+column-width: 80px;
+
+}
+p, li {
+    line-height: 2em;
+}
+
+#inspiration {
+    background-color: #6373bd;
+    padding-top: 20px;
+
+}
