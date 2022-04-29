@@ -149,6 +149,7 @@ font-weight: 700;
     color: #8A898A;
     letter-spacing: 2px; 
     font-weight: 700;
+    
 }
 #artists{
     padding: 20px;
@@ -159,6 +160,22 @@ font-weight: 700;
     border-bottom: solid green;
 }
 
+nav a:hover{
+    padding: 20px;
+    text-underline-position: below;
+    color: #8A898A;
+    letter-spacing: 2px; 
+    font-weight: 700;
+    border-bottom:solid green;
+}
+as
+#home:hover{
+    color:solid #f8d719}
+
+#search:hover{
+    color:solid #97958A}
+#library:hover{
+            color:solid #97958A}
 
 /*************************/
 /* Part C: Artists Panel */
