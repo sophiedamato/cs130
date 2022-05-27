@@ -1,4 +1,5 @@
-<html>
+<html lang="en"></html>
+
     <head>
         <title>Spotify Player</title>
         <link rel="stylesheet" href="style.css">
@@ -25,33 +26,50 @@
                 <input type="search" 
                     placeholder="Search for Artists or Songs" 
                     id="search" 
-                    value="" />
+                    value=""
+                    alt="search bar" 
+                    aria-label id="fas fa-search">
+
+                    />
             </header>
             <article id="featured-content">
                 <section id="artist-section">
                     <h1>Top Result</h1>
-                    <section id="artist">Artist card goes here.</section>
+                    <section id="artist"> Artist card goes here.</section>
                 </section>
+                    
+    
                 <section id="track-section">
                     <h1>Songs</h1>
-                    <section id="tracks">First 5 tracks go here.</section>
+                    
+                    <section id="tracks"> First 5 tracks go here.
+                    </section>
                 </section>
+
+
                 <section id="album-section">
                     <h1>Albums</h1>
-                    <section id="albums">Albums go here.</section>
+                    <section id="albums"> Albums go here.</section>
                 </section>
+               
             </article>
         </main>
         
         <footer>
             <div id="current-track" class="track-item">
+                <
+                  
                 <!-- to be populated from data -->
             </div>
             <div class="player">
                 <div class="controls">
                     <button id="rwd" aria-label="rewind"><i class="fas fa-step-backward"></i></button>
-                    <button id="play_pause" aria-label="play or pause"><i class="far fa-play-circle"></i></button>
+
+                    <button id="play_pause" aria-label="play or pause"><i class="far fa-play-circle"></i>
+                    </button>
+                    
                     <button id="ffwd" aria-label="fast forward"><i class="fas fa-step-forward"></i></button>
+
                 </div>
                 <div class="slider">
                     <audio preload class="audio">

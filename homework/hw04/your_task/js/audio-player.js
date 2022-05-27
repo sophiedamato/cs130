@@ -139,5 +139,7 @@ const AudioPlayer = (selector, audioFile) => {
         this.setAudioFile(audioFile);
     }
     return this;
-};
-
+{}
+    function artistcard(ev) {
+        const artistname = document.querySelector('#artistname').value;
+    }}
