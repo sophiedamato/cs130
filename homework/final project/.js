@@ -1,45 +1,98 @@
+const scrollElements = document.querySelectorAll(".scroll-element");
 
-function copyAnim(){
-    ScrollReveal().reveal(".the_essentials", {delay: 200, distance: "500px", origin:"left"});
-    ScrollReveal().reveal(".secondhand_trends", {delay: 400, distance: "500px", origin:"left"});
-    ScrollReveal().reveal(".ethics", {delay: 200, distance: "500px", origin:"left"});
-    ScrollReveal().reveal(".what_next", {delay: 400, distance: "1000px", origin:"top"});
-   }
-   
-   
-copyAnim();
+const elementInView = (el, dividend = 1) => {
+    const elementTop = el.getBoundingClientRect().top;
+    return (
+        elementTop <=
+        (window.innerHeight || document.documentElement.clientHeight) / dividend
+    );
+};
 
+const elementOutofView = (el) => {
+    const elementTop = el.getBoundingClientRect().top;
+    return (
+        elementTop > (window.innerHeight || document.documentElement.clientHeight)
+    );
+};
 
+const displayScrollElement = (element) => {
+    element.classList.add("scrolled");
+};
 
-/** Interactive Element – Timeline Map */
-const date_buttons = document.getElementsByName("date-button")
-const photo = document.querySelector("#timeline_map")
+const hideScrollElement = (element) => {
+    element.classList.remove("scrolled");
+};
 
-function change_date(date) {
-    photo.src = "images/" + date + ".png"
+const handleScrollAnimation = () => {
+    scrollElements.forEach((el) => {
+        if (elementInView(el, 1.25)) {
+            displayScrollElement(el);
+        } 
+        else if (elementOutofView(el)) {
+            hideScrollElement(el)
+        }
+    })
 }
 
-date_buttons.forEach(button => {
-    button.addEventListener("change", event =>{
-        change_date(button.value)
-    })
-})
+window.addEventListener("scroll", handleScrollAnimation);
+
+//hopefully this will be a photo carousel?//
+let currentIndex = 0; 
+
+const images = [
+    'native',
+    'images/purple.jpg',
+    'images/jar.jpg',
+    'images/green.jpg',
+    'images/green1.jpg',
+    'images/purple1.jpg',
+    'images/magnolias.jpg',
+    'images/daisy1.jpg'
+];
+
+const initScreen = () => {
+    images.forEach((image, idx) => {
+        document.querySelector('.cards').innerHTML += `
+        <li class="card">
+            <button class="image" 
+            onclick="handleThumbnailClick(event)"
+                style="background-image:url('${image}')"
+                data-index=${idx}"
+                aria-label="Displays image ${idx} in the main panel."></button>
+        </li>`;
+    });
+};
 
 
-// /** Interactive Element - Outfit Slideshow */
- 
-// function opendrawer1(){
-//     TweenLite.to($('.iv_infocard') , {autoAlpha: 1, display:'inline-block'});
-// }
+const handleThumbnailClick = (ev) => { 
+    console.log(ev);
+   const elem = ev.currentTarget;
+   console.log(elem.style.backgroundImage);
+   const bgImage = elem.style.backgroundImage;
+   document.querySelector('.featured_image').style.backgroundImage = bgImage;
+}
+// Create  a function that handles previous and one that handles next
 
-// function opendrawer2(){
-//     TweenLite.to($('.ho_infocard'), {autoAlpha: 1, display:'inline-block'});
-// }
+const previous = (event) => { 
+    if (currentIndex > 0) {
+        currentIndex -= 1;
+    } else {
+        currentIndex = 7;
+    }
+    console.log("currentIndex", currentIndex);
+    console.log('show previous image', currentIndex);
+    console.log(images[currentIndex]); 
+    document.querySelector('.featured_image').style.backgroundImage = `url(${images[currentIndex]})`;
+}
+const next = (event) => {
+    if (currentIndex < 7) {
+        currentIndex += 1;
+    } else { 
+        currentIndex = 0;
+    }
+    console.log('show next image', currentIndex);
+    console.log(images[currentIndex]);
+    document.querySelector('.featured_image').style.backgroundImage = `url(${images[currentIndex]})`;
+}
 
-// function opendrawer3(){
-//     TweenLite.to($('.wl_infocard'), {autoAlpha: 1, display:'inline-block'});
-// }
-
-// function opendrawer4(){
-//     TweenLite.to($('.rv_infocard'), {autoAlpha: 1, display:'inline-block'});
-// }
+initScreen();
