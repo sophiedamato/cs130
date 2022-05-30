@@ -13,81 +13,156 @@
 
 #hero {
     /* Sizing */
-    width: 100vw;
-    height: 100vh;
+    /* width: 100vw;
+    height: 100vh; */
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-image: url(images/overlay.png), url(images/header.jpg);
-    background-size: cover;
     background-position: center center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-color: #7B8060;
-    z-index: 1;
     font-size: 60px;
-  
+    padding-top: 300px;
+}
+p{
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    padding-bottom: 200px;
+    font-family: 'Karla', sans-serif;
 }
 
-
+.subtitle{
+    font: 30px;
+}
 
 /* Article Copy */
 
+.pic1 {
+    background-color: palevioletred;
+    border-color: salmon;
+    height: 40vh;
+    width: 20vw;
+    float:right;
+    margin-right: 75px;
+    margin-top: 400px;
+    word-wrap: break-word;
+    padding: 10px;
+}
+
+.pic2 {
+    height: 40vh;
+    width: 20vw;
+    background-color: peru;
+    float:right;
+    /* margin-right: px; */
+    margin-top: 100px;
+    margin-left: 10px;
+    word-wrap: break-word;
+    padding: 10px;
+}
+.pic3 {
+    height: 40vh;
+    width: 20vw;
+    background-color: rgb(112, 139, 221);
+    float:right;
+    /* margin-right: 20px; */
+    margin-top: 400px;
+    word-wrap: break-word;
+    padding: 10px;
+    margin-left: 10px;
+}
+
+#wildrice {
+    height: 40px;
+
+    margin-bottom: 300px;
+    float: left;
+
+}
+#wildrice2 {
+    height: 10vh;
+    margin-bottom: 200px;
+
+}
+#lupine {
+    height: 100px;
+    float: right;
+    margin-bottom: 70px;
+
+}
+#flowers {
+    height: 10vh;
+}
+
 main{
-    max-width: 200px;
-    margin: 20px auto;
-
-}
-.parent{ 
-    display: flex;
-    flex-direction: row;
-}
-.child1 {
-    width: 60%;
-    height: 200vh;
-    background-color: tan;
-    text-align: left;
-    font-size: 24px;
-    padding: 60px;
+    margin: 10px;
+    font-family: 'Karla', sans-serif;
 }
 
-.child2 {
-    width: 40%;
+.scroll-container {
     height: 100vh;
-    background-color: rgb(161, 168, 231);
-    text-align: right;
+    min-height: 450px;
+    padding: 2rem 1rem;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+}
+.scroll-container.c2 {
+    justify-content: center;
+}
+
+.scrolled.fade-in-bottom {
+    animation: fade-in-bottom 1s ease-in-out both;
+}
+
+.scroll-element {
+    height: 100px;
+    width: 100px;
+    background-color: #eaeaea;
+    opacity: 0;
+    transition: opacity 500ms;
 }
 
 
 .story_para {
     color: black;
-    font-family: "Cardo";
-    font-size: 1em;
+    font-family: sans-serif;
+    font-size: 24px;
+    align-content: center;
     text-align: left;
     padding-top: 2vh;
     padding-bottom: 2vh;
+    padding-left: 300px;
+    padding-right: 300px;
     /* margin: 10px auto; */
-    max-width: 900px;
-    line-height: 3.3vh;
+    line-height: 48px;
+    font-family: 'Karla', sans-serif;
+
 }
  
 .pull_quote{
     color: #8E4331;
     font-family: "Josefin Sans";
-    font-size: 2em;
+    font-size: 60px;
     text-align: center;
-    max-width: 600px;
-    margin: 0px auto;
+    margin: 40px;
     padding-top: 4vh;
     padding-bottom: 4vh;
-    line-height: 4.5vh;
+    line-height: 10vh;
+    align-content: center;
 }
 
+footer{
+    height: 400px;
+    padding: 80px;
+    background-color: seagreen;
+}
 
 /** Mobile Optimization **/
 @media screen and (max-width: 1200px) {
-    main{
+    .story_para{
         max-width: 800px;
         margin: 20px auto;
     }
@@ -96,543 +171,33 @@ main{
 @media (min-width: 1000px) and (max-width: 1200px) {
     #hero-inner h3{
         max-width: 350px;
-        margin: 10px auto;
+        margin: 10px;
         color: white;
         text-shadow: 0px 0px 10px #000;
     }
     
     main{
         max-width: 600px;
-        margin: 20px auto;
+        margin: auto;
     }
 
     .pull_quote{
         max-width: 450px;
     }
 
-    #timeline_format{
-        max-width: 600px;
-    }
-    
-    #timeline_map {
-        max-width: 450px;
-        width:100%;
-        border: #14163d 3px solid;
-    }
-    
-    
-    #timeline_key{
-        position: absolute;
-        padding-left: 5vh;
-        width: 20%;
-    }
-    
-    .buttons{
-        /* margin: 1vh auto; */
-        max-width: 400px;
-    }
-    
-    .button{
-
-        margin-left: 7vh;
-        margin-right:2vh;
-    }
-
-    
-
-    #endmark{
-        position: relative;
-        width: 2%;
-        margin-left: 2px;
-    }
-
+   
 }
 
 @media (min-width: 700px) and (max-width: 999px) {
     
-    #hero-inner h1{
-        max-width: 200px;
-        margin: 10px auto;
-        color: white;
-        font-size: 60px;
-        text-align: center;
-        text-shadow: 0px 0px 10px #000;
-    }
-
-    #hero-inner h3{
-        max-width: 200px;
-        margin: 10px auto;
-        color: white;
-        line-height: 3vh;
-        text-shadow: 0px 0px 10px #000;
-    }
-    
-    #hero-inner p{
-        max-width: 150px;
-        padding-top:10vh;
-        color: white;
-        text-align: center;
-        margin: 0px auto;
-        text-shadow: 0px 0px 10px #000;
-    }
-   
+  
     main{
         max-width: 400px;
-        margin: 10px auto;
+        margin: 10px;
     }
 
     .pull_quote{
         max-width: 350px;
         line-height: 3.5vh;
         font-size: 22px;
-    }
-
-    #shirt_1, #shirt_2, #shirt_3 {
-        width: 40%;
-    }
-    
-    #timeline_format{
-        max-width: 400px;
-    }
-    
-    #timeline_map {
-        max-width: 350px;
-        width:100%;
-        border: #14163d 3px solid;
-    }
-    
-    #timeline_key{
-        position: relative;
-        max-width: 450px;
-        margin-top:10px;
-        margin-left: 40px;
-        width: 60%;
-    }
-    
-    .buttons{
-        /* margin: 1vh auto; */
-        max-width: 300px;
-        margin-left: 40px;
-    }
-    
-    .button{
-        margin-top: 2vh;
-        margin-left: 1.1vh;
-        margin-right:2vh;
-        background-color: #10244A;
-        border: 1px solid #10244A;
-        border-radius: 5px;
-        font-size: x-small;
-        color: #fff;
-        cursor: pointer;
-        display: inline-block;
-        padding: 10px 18px;
-    }
-
-    #button_4{
-        margin-left: 0.5vh;
-    }
-
-    #slideshow{
-        padding-top:20vh;
-        padding-bottom:20vh;
-    }
-    
-    #slideshow_text h1{
-        color:#14163d;
-        margin-bottom: 5vh;
-        font-family: "Josefin Sans";
-        font-size: 30px;
-        text-align: center;
-    }
-    
-    #slideshow_text p{
-        margin-top: -4vh;
-        margin-bottom: 5vh;
-        font-size: 15px;
-        text-align: center;
-    }
-    
-    #closet {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-    }
-    
-    .indigovintage {
-        margin-bottom: 40px;
-    } 
-    
-    .ivpic {
-        display: inline-block;
-        width: 560px;
-        height: 320px;
-    }
-    
-    
-    .iv_portrait{
-        display: inline-block;
-        margin-left: 10px;
-        width: 320px;
-        height: 400px;
-    }
-    
-
-    .iv_brand{
-        display: inline-block;
-        margin-left: 10px; 
-        width: 256px;
-        height: 320px;
-    }
-    
-    
-    .wasteland {
-        margin-bottom: 40px;
-    } 
-    
-    .wlpic {
-        display: inline-block;
-        width: 560px;
-        height: 320px;
-    }
-    
-    
-    .wl_portrait{
-        display: inline-block;
-        margin-left: 10px;
-        width: 256px;
-        height: 320px;
-    }
-    
-    
-    .wl_accessory{
-        display: inline-block;
-        margin-left: 10px;
-        width: 280px;
-        height: 320px;
-    }
-    
-    .rvca {
-        margin-bottom: 40px
-    } 
-    
-    .rvpic {
-        display: inline-block;
-        width: 560px;
-        height: 320px;
-    }
-    
-    
-    .rv_portrait{
-        display: inline-block;
-        margin-left: 10px;
-        width: 328px;
-        height: 320px;
-    }
-
-    
-    .rv_accessory{
-        display: inline-block;
-        margin-left: 10px;
-        width: 208px;
-        height: 320px;
-    }
-    
-    .heldover {
-        margin-bottom: 80px
-    }
-    
-    .hopic {
-        display: inline-block;
-        width: 560px;
-        height: 320px;
-    }
-    
-    
-    .ho_portrait{
-        display: inline-block;
-        margin-left: 10px;
-        width: 296px;
-        height: 320px;
-        background-size: contain;
-    }
-    
-    .ho_history{
-        display: inline-block;
-        margin-left: 10px;
-        width: 296px;
-        height: 320px;
-    }
-
-    #endmark{
-        position: relative;
-        width: 3%;
-        margin-left: 2px;
-    }
-  
-}
-
-@media (min-width: 320px) and (max-width: 699px) {
-    
-    #hero-inner h1{
-        max-width: 250px;
-        margin: 10px auto;
-        color: white;
-        font-size: 30px;
-        text-align: center;
-        text-shadow: 0px 0px 10px #000;
-    }
-
-    #hero-inner h3{
-        max-width: 225px;
-        margin: 10px auto;
-        color: white;
-        line-height: 3vh;
-        font-size: 13px;
-        text-shadow: 0px 0px 10px #000;
-    }
-    
-    #hero-inner p{
-        max-width: 200px;
-        padding-top:10vh;
-        color: white;
-        text-align: center;
-        margin: 0px auto;
-        font-size: 10px;
-        text-shadow: 0px 0px 10px #000;
-    }
-   
-    main{
-        max-width: 100%;
-        padding: 0 10px;
-    }
-
-    .story_para {
-        font-size: 12px;
-    }
-
-    #drop-cap:first-child:first-letter {
-        font-size: 52px;
-        line-height: 48px;
-        margin-top: 10px;
-        padding-right: 5px;
-    }
-
-    .pull_quote{
-        max-width: 280px;
-        line-height: 4vh;
-        font-size: 18px;
-    }
-
-    h2{
-        font-family: "Josefin Sans";
-        text-align: left;
-        color: #8E4331;
-        font-size: 20px;
-        max-width: 700px;
-        /* margin: 10px auto; */
-    }
-
-    #timeline_headline {
-        font-size: 20px;
-        font-family: "Josefin Sans";
-        color:#14163d;
-    }
-
-    .attribution{
-        font-size: 12px;
-        font-family: "Cardo";
-    }
-
-    #shirt_1, #shirt_2, #shirt_3 {
-        width: 30%;
-    }
-    
-    #timeline_format{
-        max-width: 100%;
-        padding: 0 10px;
-    }
-    
-    #timeline_map {
-        max-width: 100%;
-        border: #14163d 3px solid;
-    }
-    
-    #timeline_key{
-        position: relative;
-        max-width: 100%;
-        padding: 0 10px;
-        margin-top: 10px;
-        margin-left: 50px;
-        width: 70%;
-    }
-    
-    .buttons{
-        /* margin: 1vh auto; */
-        max-width: 100%;
-        padding: 0 10px;
-        margin-left: 40px;
-    }
-    
-    .button{
-        margin-top: 2vh;
-        margin-left: 1.5vh;
-        margin-right:2vh;
-        background-color: #10244A;
-        border: 1px solid #10244A;
-        border-radius: 5px;
-        font-size: x-small;
-        color: #fff;
-        cursor: pointer;
-        display: inline-block;
-        padding: 10px 18px;
-    }
-
-    #button_4{
-        margin-left: 0.8vh;
-    }
-
-    #slideshow{
-        padding-top:10vh;
-        padding-bottom:10vh;
-    }
-    
-    #slideshow_text h1{
-        color:#14163d;
-        margin-bottom: 5vh;
-        font-family: "Josefin Sans";
-        font-size: 20px;
-        text-align: center;
-    }
-    
-    #slideshow_text p{
-        margin-top: -4vh;
-        margin-bottom: 5vh;
-        font-size: 10px;
-        text-align: center;
-    }
-    
-    #closet {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-    }
-    
-    .indigovintage {
-        margin-bottom: 40px;
-    } 
-    
-    .ivpic {
-        display: inline-block;
-        width: 313.6px;
-        height: 179.2px;
-    }
-    
-    
-    .iv_portrait{
-        display: inline-block;
-        margin-left: 10px;
-        width: 160px;
-        height: 180px;
-    }
-    
-
-    .iv_brand{
-        display: inline-block;
-        margin-left: 10px; 
-        width: 143.36px;
-        height: 179.2px;
-    }
-    
-    
-    .wasteland {
-        margin-bottom: 40px;
-    } 
-    
-    .wlpic {
-        display: inline-block;
-        width: 313.6px;
-        height: 179.2px;
-    }
-    
-    
-    .wl_portrait{
-        display: inline-block;
-        margin-left: 10px;
-        width: 143.36px;
-        height: 179.2px;
-    }
-    
-    
-    .wl_accessory{
-        display: inline-block;
-        margin-left: 10px;
-        width: 156.8px;
-        height: 179.2px;
-    }
-    
-    .rvca {
-        margin-bottom: 40px
-    } 
-    
-    .rvpic {
-        display: inline-block;
-        width: 313.6px;
-        height: 179.2px;
-    }
-    
-    
-    .rv_portrait{
-        display: inline-block;
-        margin-left: 30px;
-        width: 250.88px;
-        height: 143.36px;
-    }
-
-    
-    .rv_accessory{
-        display: inline-block;
-        margin-left: -100px;
-        margin-top: 0px;
-        width: 93.184px;
-        height: 143.36px;
-    }
-    
-    .heldover {
-        margin-bottom: 80px
-    }
-    
-    .hopic {
-        display: inline-block;
-        width: 313.6px;
-        height: 179.2px;
-    }
-    
-    
-    .ho_portrait{
-        display: inline-block;
-        margin-left: 10px;
-        width: 165.76px;
-        height: 179.2px;
-        background-size: contain;
-    }
-    
-    .ho_history{
-        display: inline-block;
-        margin-left: 0px;
-        width: 165.76px;
-        height: 179.2px;
-    }
-
-
-    #endmark{
-        position: relative;
-        width: 3%;
-        margin-left: 2px;
-    }
-  
-}
+    }}
